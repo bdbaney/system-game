@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillData" format=3]
+
+[ext_resource type="Script" path="res://data/evolution_data.gd" id="1_024vk"]
+[ext_resource type="Script" path="res://data/skill_data.gd" id="2_4q8v2"]
+
+[resource]
+script = ExtResource("2_4q8v2")
+id = "crushing_blow"
+display_name = "Crushing Blow"
+description = "A blow that topples things far above your level."
+rarity = 3
+kind = 1
+tags = Array[String](["melee", "strike"])
+damage_multiplier = 3.0
+xp_per_level = 8

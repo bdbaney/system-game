@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="ClassData" format=3]
+
+[ext_resource type="Script" path="res://data/class_data.gd" id="1_owrlm"]
+
+[resource]
+script = ExtResource("1_owrlm")
+id = "beast"
+display_name = "Beast"
+description = "Monster class for predators. Levels by the same rules as everyone else."
+playable = false
+base_stats = Dictionary[String, int]({
+"agility": 6,
+"endurance": 5,
+"intelligence": 1,
+"perception": 6,
+"strength": 6,
+"toughness": 2,
+"vitality": 5,
+"willpower": 2,
+"wisdom": 1
+})
+stats_per_level = Dictionary[String, int]({
+"agility": 1,
+"strength": 1,
+"vitality": 1
+})
+starting_skills = Array[String](["natural_weapons"])

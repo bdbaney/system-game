@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="ClassData" format=3]
+
+[ext_resource type="Script" path="res://data/class_data.gd" id="1_jtc3a"]
+
+[resource]
+script = ExtResource("1_jtc3a")
+id = "tank"
+display_name = "Tank"
+description = "Absorbs punishment so others don't have to. Not yet available."
+base_stats = Dictionary[String, int]({
+"agility": 4,
+"endurance": 7,
+"intelligence": 4,
+"perception": 4,
+"strength": 6,
+"toughness": 9,
+"vitality": 9,
+"willpower": 4,
+"wisdom": 4
+})
+stats_per_level = Dictionary[String, int]({
+"endurance": 1,
+"toughness": 2,
+"vitality": 2
+})

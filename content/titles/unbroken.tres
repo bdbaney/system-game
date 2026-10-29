@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="TitleData" format=3]
+
+[ext_resource type="Script" path="res://data/requirement.gd" id="1_glbjn"]
+[ext_resource type="Script" path="res://data/title_data.gd" id="2_13pys"]
+
+[sub_resource type="Resource" id="Resource_sqiqp"]
+script = ExtResource("1_glbjn")
+metric = "near_death_survivals"
+value = 3.0
+
+[resource]
+script = ExtResource("2_13pys")
+id = "unbroken"
+display_name = "Unbroken"
+description = "Survive at the edge of death three times."
+rarity = 2
+requirements = Array[ExtResource("1_glbjn")]([SubResource("Resource_sqiqp")])
+stat_bonus = Dictionary[String, int]({
+"vitality": 3,
+"willpower": 1
+})

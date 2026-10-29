@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SkillData" format=3]
+
+[ext_resource type="Script" path="res://data/evolution_data.gd" id="1_skg73"]
+[ext_resource type="Script" path="res://data/skill_data.gd" id="2_2fqqg"]
+
+[resource]
+script = ExtResource("2_2fqqg")
+id = "feral_fangs"
+display_name = "Feral Fangs"
+description = "Fangs shaped by the hunt."
+rarity = 2
+tags = Array[String](["melee", "natural"])
+passive_damage_bonus = 0.12
+xp_per_level = 6

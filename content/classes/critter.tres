@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="ClassData" format=3]
+
+[ext_resource type="Script" path="res://data/class_data.gd" id="1_go0mx"]
+
+[resource]
+script = ExtResource("1_go0mx")
+id = "critter"
+display_name = "Critter"
+description = "Monster class for prey animals."
+playable = false
+base_stats = Dictionary[String, int]({
+"agility": 4,
+"endurance": 2,
+"intelligence": 1,
+"perception": 4,
+"strength": 1,
+"toughness": 0,
+"vitality": 1,
+"willpower": 1,
+"wisdom": 1
+})
+stats_per_level = Dictionary[String, int]({
+"vitality": 1
+})

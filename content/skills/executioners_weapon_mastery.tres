@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SkillData" format=3]
+
+[ext_resource type="Script" path="res://data/evolution_data.gd" id="1_403w3"]
+[ext_resource type="Script" path="res://data/skill_data.gd" id="2_wqbrd"]
+
+[resource]
+script = ExtResource("2_wqbrd")
+id = "executioners_weapon_mastery"
+display_name = "Executioner's Weapon Mastery"
+description = "Every swing is meant to end the fight."
+rarity = 2
+tags = Array[String](["melee", "weapon"])
+passive_damage_bonus = 0.1
+xp_per_level = 8

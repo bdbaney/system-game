@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="ClassData" format=3]
+
+[ext_resource type="Script" path="res://data/class_data.gd" id="1_xqrlm"]
+
+[resource]
+script = ExtResource("1_xqrlm")
+id = "healer"
+display_name = "Healer"
+description = "Mends wounds and sustains allies. Not yet available."
+base_stats = Dictionary[String, int]({
+"agility": 4,
+"endurance": 4,
+"intelligence": 6,
+"perception": 4,
+"strength": 4,
+"toughness": 3,
+"vitality": 5,
+"willpower": 7,
+"wisdom": 9
+})
+stats_per_level = Dictionary[String, int]({
+"vitality": 1,
+"willpower": 1,
+"wisdom": 2
+})

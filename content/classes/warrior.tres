@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ClassData" format=3]
+
+[ext_resource type="Script" path="res://data/class_data.gd" id="1_1dlr2"]
+
+[resource]
+script = ExtResource("1_1dlr2")
+id = "warrior"
+display_name = "Warrior"
+description = "Front-line fighter. Grows stronger the more it fights up close."
+available = true
+base_stats = Dictionary[String, int]({
+"agility": 4,
+"endurance": 6,
+"intelligence": 3,
+"perception": 4,
+"strength": 8,
+"toughness": 6,
+"vitality": 8,
+"willpower": 5,
+"wisdom": 3
+})
+stats_per_level = Dictionary[String, int]({
+"endurance": 1,
+"strength": 2,
+"toughness": 1,
+"vitality": 1
+})
+starting_skills = Array[String](["basic_weapon_mastery", "power_strike"])

@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="ClassData" format=3]
+
+[ext_resource type="Script" path="res://data/class_data.gd" id="1_anien"]
+
+[resource]
+script = ExtResource("1_anien")
+id = "archer"
+display_name = "Archer"
+description = "Ranged hunter. Rewards patience, positioning and precision."
+available = true
+base_stats = Dictionary[String, int]({
+"agility": 8,
+"endurance": 4,
+"intelligence": 4,
+"perception": 8,
+"strength": 5,
+"toughness": 3,
+"vitality": 6,
+"willpower": 4,
+"wisdom": 4
+})
+stats_per_level = Dictionary[String, int]({
+"agility": 2,
+"perception": 2,
+"strength": 1
+})
+starting_skills = Array[String](["basic_archery"])

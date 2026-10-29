@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SkillData" format=3]
+
+[ext_resource type="Script" path="res://data/evolution_data.gd" id="1_t7bew"]
+[ext_resource type="Script" path="res://data/skill_data.gd" id="2_wx5yv"]
+
+[resource]
+script = ExtResource("2_wx5yv")
+id = "relentless_weapon_mastery"
+display_name = "Relentless Weapon Mastery"
+description = "Forged by sheer volume of blows. Never stops swinging."
+rarity = 2
+tags = Array[String](["melee", "weapon"])
+passive_damage_bonus = 0.1
+xp_per_level = 8

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="ClassData" format=3]
+
+[ext_resource type="Script" path="res://data/class_data.gd" id="1_dfux1"]
+
+[resource]
+script = ExtResource("1_dfux1")
+id = "rogue"
+display_name = "Rogue"
+description = "Strikes from the shadows. Not yet available."
+base_stats = Dictionary[String, int]({
+"agility": 9,
+"endurance": 4,
+"intelligence": 4,
+"perception": 6,
+"strength": 5,
+"toughness": 3,
+"vitality": 5,
+"willpower": 4,
+"wisdom": 4
+})
+stats_per_level = Dictionary[String, int]({
+"agility": 2,
+"perception": 1,
+"strength": 1
+})

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillData" format=3]
+
+[ext_resource type="Script" path="res://data/evolution_data.gd" id="1_4krde"]
+[ext_resource type="Script" path="res://data/skill_data.gd" id="2_n1ahk"]
+
+[resource]
+script = ExtResource("2_n1ahk")
+id = "cleaving_strike"
+display_name = "Cleaving Strike"
+description = "A strike honed on a mountain of fallen foes."
+rarity = 2
+kind = 1
+tags = Array[String](["melee", "strike"])
+damage_multiplier = 2.4
+xp_per_level = 8

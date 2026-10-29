@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SkillData" format=3]
+
+[ext_resource type="Script" path="res://data/evolution_data.gd" id="1_7tp3x"]
+[ext_resource type="Script" path="res://data/skill_data.gd" id="2_lnqe3"]
+
+[resource]
+script = ExtResource("2_lnqe3")
+id = "duelists_weapon_mastery"
+display_name = "Duelist's Weapon Mastery"
+description = "Untouched by stronger foes. Precision over force."
+rarity = 3
+tags = Array[String](["melee", "weapon"])
+passive_damage_bonus = 0.14
+xp_per_level = 8

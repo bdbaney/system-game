@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillData" format=3]
+
+[ext_resource type="Script" path="res://data/evolution_data.gd" id="1_y4krf"]
+[ext_resource type="Script" path="res://data/skill_data.gd" id="2_pcskn"]
+
+[resource]
+script = ExtResource("2_pcskn")
+id = "heavy_strike"
+display_name = "Heavy Strike"
+description = "A heavier, more reliable Power Strike."
+rarity = 1
+kind = 1
+tags = Array[String](["melee", "strike"])
+damage_multiplier = 2.2
+xp_per_level = 8

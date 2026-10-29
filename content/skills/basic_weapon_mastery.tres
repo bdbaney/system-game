@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="SkillData" format=3]
+
+[ext_resource type="Script" path="res://data/evolution_data.gd" id="1_7ykxk"]
+[ext_resource type="Script" path="res://data/requirement.gd" id="2_i0chr"]
+[ext_resource type="Script" path="res://data/skill_data.gd" id="3_iwosx"]
+
+[sub_resource type="Resource" id="Resource_4w738"]
+script = ExtResource("1_7ykxk")
+id = "evo_weapon_mastery"
+result_skill_id = "weapon_mastery"
+world_first_bonus = false
+
+[sub_resource type="Resource" id="Resource_lulme"]
+script = ExtResource("2_i0chr")
+metric = "melee_hits"
+value = 40.0
+
+[sub_resource type="Resource" id="Resource_2qd2w"]
+script = ExtResource("1_7ykxk")
+id = "evo_relentless"
+result_skill_id = "relentless_weapon_mastery"
+requirements = Array[ExtResource("2_i0chr")]([SubResource("Resource_lulme")])
+
+[sub_resource type="Resource" id="Resource_wv1oj"]
+script = ExtResource("2_i0chr")
+metric = "skill_uses:power_strike/melee_hits"
+value = 0.4
+
+[sub_resource type="Resource" id="Resource_b3cw8"]
+script = ExtResource("2_i0chr")
+metric = "kills"
+value = 15.0
+
+[sub_resource type="Resource" id="Resource_tns6j"]
+script = ExtResource("1_7ykxk")
+id = "evo_executioner"
+result_skill_id = "executioners_weapon_mastery"
+requirements = Array[ExtResource("2_i0chr")]([SubResource("Resource_wv1oj"), SubResource("Resource_b3cw8")])
+
+[sub_resource type="Resource" id="Resource_403as"]
+script = ExtResource("2_i0chr")
+metric = "flawless_kills"
+value = 5.0
+
+[sub_resource type="Resource" id="Resource_d1aqg"]
+script = ExtResource("2_i0chr")
+metric = "kills_above_level_3"
+value = 2.0
+
+[sub_resource type="Resource" id="Resource_6rsnc"]
+script = ExtResource("1_7ykxk")
+id = "evo_duelist"
+result_skill_id = "duelists_weapon_mastery"
+requirements = Array[ExtResource("2_i0chr")]([SubResource("Resource_403as"), SubResource("Resource_d1aqg")])
+
+[sub_resource type="Resource" id="Resource_c3tbr"]
+script = ExtResource("2_i0chr")
+metric = "low_hp_kills"
+value = 3.0
+
+[sub_resource type="Resource" id="Resource_pse6g"]
+script = ExtResource("1_7ykxk")
+id = "evo_berserker"
+result_skill_id = "berserkers_weapon_mastery"
+requirements = Array[ExtResource("2_i0chr")]([SubResource("Resource_c3tbr")])
+
+[resource]
+script = ExtResource("3_iwosx")
+id = "basic_weapon_mastery"
+display_name = "Basic Weapon Mastery"
+description = "Improves damage with melee weapons. Grows with every hit."
+tags = Array[String](["melee", "weapon"])
+passive_damage_bonus = 0.05
+evolution_level = 5
+evolutions = Array[ExtResource("1_7ykxk")]([SubResource("Resource_4w738"), SubResource("Resource_2qd2w"), SubResource("Resource_tns6j"), SubResource("Resource_6rsnc"), SubResource("Resource_pse6g")])

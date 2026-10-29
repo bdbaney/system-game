@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="TitleData" format=3]
+
+[ext_resource type="Script" path="res://data/requirement.gd" id="1_d7vdd"]
+[ext_resource type="Script" path="res://data/title_data.gd" id="2_vw63p"]
+
+[sub_resource type="Resource" id="Resource_o0lgk"]
+script = ExtResource("1_d7vdd")
+metric = "kills"
+value = 1.0
+
+[resource]
+script = ExtResource("2_vw63p")
+id = "first_blood"
+display_name = "First Blood"
+description = "Slay your first foe."
+requirements = Array[ExtResource("1_d7vdd")]([SubResource("Resource_o0lgk")])
+stat_bonus = Dictionary[String, int]({
+"strength": 1
+})

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="TitleData" format=3]
+
+[ext_resource type="Script" path="res://data/requirement.gd" id="1_qmuf8"]
+[ext_resource type="Script" path="res://data/title_data.gd" id="2_8g5l1"]
+
+[sub_resource type="Resource" id="Resource_e25lq"]
+script = ExtResource("1_qmuf8")
+metric = "kills_tag:wolf"
+value = 25.0
+
+[resource]
+script = ExtResource("2_8g5l1")
+id = "wolfbane"
+display_name = "Wolfbane"
+description = "Slay 25 wolves."
+requirements = Array[ExtResource("1_qmuf8")]([SubResource("Resource_e25lq")])
+stat_bonus = Dictionary[String, int]({
+"agility": 1,
+"perception": 1
+})

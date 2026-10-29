@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SkillData" format=3]
+
+[ext_resource type="Script" path="res://data/evolution_data.gd" id="1_f7u35"]
+[ext_resource type="Script" path="res://data/skill_data.gd" id="2_2jngh"]
+
+[resource]
+script = ExtResource("2_2jngh")
+id = "honed_fangs"
+display_name = "Honed Fangs"
+description = "Sharper, deadlier fangs."
+rarity = 1
+tags = Array[String](["melee", "natural"])
+passive_damage_bonus = 0.08
+xp_per_level = 6

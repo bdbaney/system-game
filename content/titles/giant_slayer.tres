@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="TitleData" format=3]
+
+[ext_resource type="Script" path="res://data/requirement.gd" id="1_5p2oe"]
+[ext_resource type="Script" path="res://data/title_data.gd" id="2_kxvxv"]
+
+[sub_resource type="Resource" id="Resource_rxb1m"]
+script = ExtResource("1_5p2oe")
+metric = "kills_above_level_3"
+value = 1.0
+
+[resource]
+script = ExtResource("2_kxvxv")
+id = "giant_slayer"
+display_name = "Giant Slayer"
+description = "Slay a foe at least 3 levels above you."
+rarity = 2
+requirements = Array[ExtResource("1_5p2oe")]([SubResource("Resource_rxb1m")])
+stat_bonus = Dictionary[String, int]({
+"endurance": 1,
+"strength": 2
+})

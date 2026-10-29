@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="SkillData" format=3]
+
+[ext_resource type="Script" path="res://data/evolution_data.gd" id="1_us645"]
+[ext_resource type="Script" path="res://data/requirement.gd" id="2_ffn3u"]
+[ext_resource type="Script" path="res://data/skill_data.gd" id="3_7r5x1"]
+
+[sub_resource type="Resource" id="Resource_tdebs"]
+script = ExtResource("1_us645")
+id = "evo_heavy_strike"
+result_skill_id = "heavy_strike"
+world_first_bonus = false
+
+[sub_resource type="Resource" id="Resource_nfxjd"]
+script = ExtResource("2_ffn3u")
+metric = "kills"
+value = 20.0
+
+[sub_resource type="Resource" id="Resource_bf04i"]
+script = ExtResource("1_us645")
+id = "evo_cleaving_strike"
+result_skill_id = "cleaving_strike"
+requirements = Array[ExtResource("2_ffn3u")]([SubResource("Resource_nfxjd")])
+
+[sub_resource type="Resource" id="Resource_4r2un"]
+script = ExtResource("2_ffn3u")
+metric = "max_kill_level_gap"
+value = 5.0
+
+[sub_resource type="Resource" id="Resource_8knb6"]
+script = ExtResource("2_ffn3u")
+metric = "skill_uses:power_strike"
+value = 15.0
+
+[sub_resource type="Resource" id="Resource_fbm7u"]
+script = ExtResource("1_us645")
+id = "evo_crushing_blow"
+result_skill_id = "crushing_blow"
+requirements = Array[ExtResource("2_ffn3u")]([SubResource("Resource_4r2un"), SubResource("Resource_8knb6")])
+
+[resource]
+script = ExtResource("3_7r5x1")
+id = "power_strike"
+display_name = "Power Strike"
+description = "A committed blow that deals heavy damage."
+kind = 1
+tags = Array[String](["melee", "strike"])
+damage_multiplier = 1.8
+evolution_level = 5
+evolutions = Array[ExtResource("1_us645")]([SubResource("Resource_tdebs"), SubResource("Resource_bf04i"), SubResource("Resource_fbm7u")])
